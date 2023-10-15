@@ -1,0 +1,12 @@
+#!/bin/bash
+# Paolo Proni - Exercise: volumes
+filename=/var/stateexample/state.txt
+if [ -e $filename ]; then
+   echo "The current content of state.txt is:"
+   cat $filename
+fi
+echo "Enter a message:"
+read message
+echo $message >> $filename
+echo "Now the state.txt content is:"
+cat $filename
